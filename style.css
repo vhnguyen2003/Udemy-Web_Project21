@@ -1,0 +1,80 @@
+body 
+{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+h1 
+{
+    font-size: 100px;
+    color: aliceblue;
+    backdrop-filter: brightness(.5);
+}
+.split
+{
+    width: 50%;
+    height: 100%;
+    top : 0;
+    overflow: hidden;
+
+}
+.split.left
+{
+    position: absolute;
+    left: 0;
+    background-color: pink;
+    background-image: url("./iphone.png");
+    background-size: cover;
+
+}
+.split.right
+{
+    position: absolute;
+    right: 0;
+    background-color: lightblue;
+    background-image: url("./samsung.jpeg");
+    background-size: cover;
+}
+.btn
+{
+    background-color: black;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 25px;
+    border: 4px solid;
+    cursor: pointer;
+    transition: .7s background-color;
+    white-space: nowrap;
+    /* white-space: nowrap; Văn bản sẽ hiển thị trên cùng một hàng, chỉ xuống hàng khi gặp thẻ <br />. */
+
+}
+.btn:hover
+{
+    background-color: #fff;
+    color: #333;
+}
+.active-left .left 
+{
+    width: 75%;
+}
+.active-left .right 
+{
+    width: 25%;
+}
+.active-right .right 
+{
+    width: 75%;
+}
+.active-right .left 
+{
+    width: 25%;
+}
+.left, .right 
+{
+    transition: width 1s ease-in-out;
+}
